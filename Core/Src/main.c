@@ -21,6 +21,7 @@
 #include "main.h"
 #include "cmsis_os.h"
 #include "app_touchgfx.h"
+#include "usb_device.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -593,6 +594,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : BUTTON_Pin */
+  GPIO_InitStruct.Pin = BUTTON_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(BUTTON_GPIO_Port, &GPIO_InitStruct);
+
   /*Configure GPIO pins : PD12 PD13 */
   GPIO_InitStruct.Pin = GPIO_PIN_12|GPIO_PIN_13;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -939,6 +946,8 @@ void LCD_Delay(uint32_t Delay)
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void *argument)
 {
+  /* init code for USB_DEVICE */
+  MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
   for(;;)
