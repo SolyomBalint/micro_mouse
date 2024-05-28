@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "usbd_hid.h"
 #include "usb_device.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -46,6 +47,35 @@ SPI_HandleTypeDef hspi5;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
+#define GYRO_SENSITIVITY 0.00875
+#define MOUSE_SENSITIVITY 0.1
+
+typedef struct {
+    uint8_t buttons;
+    int8_t x;
+    int8_t y;
+    int8_t wheel;
+} HID_MouseReport;
+
+HID_MouseReport mouseReport; //TODO get rid of filthy globals
+extern USBD_HandleTypeDef hUsbDeviceHS;
+
+void sendMouseReport() {
+    USBD_HID_SendReport(&hUsbDeviceHS, (uint8_t*)&mouseReport, sizeof(mouseReport));
+}
+
+void updateMouseReport(int16_t deltaX, int16_t deltaY) {
+    mouseReport.x = (int8_t)deltaX;
+    mouseReport.y = (int8_t)deltaY;
+    mouseReport.buttons = 0;  // No button press
+    mouseReport.wheel = 0;    // No wheel movement
+}
+
+int16_t convertGyroToMouse(int16_t gyro_value) {
+    return (int16_t)(gyro_value * GYRO_SENSITIVITY * MOUSE_SENSITIVITY);
+}
+
+
 int _write(int file, char *ptr, int len)
 {
 	 HAL_UART_Transmit(&huart1, ptr, len, HAL_MAX_DELAY);
@@ -110,6 +140,11 @@ int main(void)
   {
 	  BSP_GYRO_GetXYZ(valxyz);
 	  printf("x: %f y: %f z: %f \r\n", valxyz[0],valxyz[1] ,valxyz[2]);
+	  int16_t deltaX = convertGyroToMouse(valxyz[0]);
+	  int16_t deltaY = convertGyroToMouse(valxyz[1]);
+
+	  updateMouseReport(deltaX, deltaY);
+	  sendMouseReport();
 	  HAL_Delay(100);
     /* USER CODE END WHILE */
 
