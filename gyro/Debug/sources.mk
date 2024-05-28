@@ -24,6 +24,10 @@ C_DEPS :=
 SUBDIRS := \
 Core/Src \
 Core/Startup \
+Drivers/BSP/Components/i3g4250d \
+Drivers/BSP/Components/l3gd20 \
+Drivers/BSP/Components/stmpe811 \
+Drivers/BSP/STM32F429I-Discovery \
 Drivers/STM32F4xx_HAL_Driver/Src \
 Middlewares/ST/STM32_USB_Device_Library/Class/HID/Src \
 Middlewares/ST/STM32_USB_Device_Library/Core/Src \

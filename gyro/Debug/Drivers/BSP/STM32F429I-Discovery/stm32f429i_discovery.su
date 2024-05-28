@@ -1,0 +1,16 @@
+../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c:164:10:BSP_GetVersion	4	static
+../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c:176:6:BSP_LED_Init	48	static
+../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c:201:6:BSP_LED_On	16	static
+../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c:213:6:BSP_LED_Off	16	static
+../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c:225:6:BSP_LED_Toggle	16	static
+../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c:240:6:BSP_PB_Init	40	static
+../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c:277:10:BSP_PB_GetState	16	static
+../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c:287:13:SPIx_Init	8	static
+../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c:325:17:SPIx_Read	24	static
+../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c:346:13:SPIx_Write	24	static
+../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c:366:16:SPIx_WriteRead	32	static
+../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c:383:13:SPIx_Error	8	static
+../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c:396:13:SPIx_MspInit	48	static
+../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c:420:6:GYRO_IO_Init	40	static
+../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c:453:6:GYRO_IO_Write	16	static
+../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c:487:6:GYRO_IO_Read	16	static
