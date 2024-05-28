@@ -3,12 +3,91 @@
 /*********************************************************************************/
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 #include <touchgfx/Color.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
+#include <images/BitmapDatabase.hpp>
 
-Screen1ViewBase::Screen1ViewBase()
+Screen1ViewBase::Screen1ViewBase() :
+    buttonCallback(this, &Screen1ViewBase::buttonCallbackHandler)
 {
     __background.setPosition(0, 0, 240, 320);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
+
+    xAxysText.setXY(30, 160);
+    xAxysText.setColor(touchgfx::Color::getColorFromRGB(110, 230, 25));
+    xAxysText.setLinespacing(0);
+    xAxysText.setWildcard(touchgfx::TypedText(T___SINGLEUSE_3TRG).getText());
+    xAxysText.resizeToCurrentText();
+    xAxysText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_KDQW));
+    add(xAxysText);
+
+    zAxysText.setXY(31, 220);
+    zAxysText.setColor(touchgfx::Color::getColorFromRGB(110, 230, 25));
+    zAxysText.setLinespacing(0);
+    zAxysText.setWildcard(touchgfx::TypedText(T___SINGLEUSE_04F0).getText());
+    zAxysText.resizeToCurrentText();
+    zAxysText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YRBS));
+    add(zAxysText);
+
+    upButton.setXY(0, 0);
+    upButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_PRESSED_ID));
+    upButton.setDelay(12);
+    upButton.setInterval(60);
+    upButton.setAction(buttonCallback);
+    add(upButton);
+
+    downButton.setXY(0, 270);
+    downButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_PRESSED_ID));
+    downButton.setDelay(12);
+    downButton.setInterval(60);
+    downButton.setAction(buttonCallback);
+    add(downButton);
+
+    upText.setXY(107, 13);
+    upText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    upText.setLinespacing(0);
+    upText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_DOZV));
+    add(upText);
+
+    downText.setXY(92, 283);
+    downText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    downText.setLinespacing(0);
+    downText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_SVY1));
+    add(downText);
+
+    leftButton.setXY(0, 70);
+    leftButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_TINY_FILL_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_TINY_FILL_ACTION_ID));
+    leftButton.setDelay(12);
+    leftButton.setInterval(60);
+    leftButton.setAction(buttonCallback);
+    add(leftButton);
+
+    rightButton.setXY(180, 70);
+    rightButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_TINY_FILL_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_TINY_FILL_ACTION_ID));
+    rightButton.setDelay(12);
+    rightButton.setInterval(60);
+    rightButton.setAction(buttonCallback);
+    add(rightButton);
+
+    leftText.setXY(11, 88);
+    leftText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    leftText.setLinespacing(0);
+    leftText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T0HH));
+    add(leftText);
+
+    rightText.setXY(184, 88);
+    rightText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    rightText.setLinespacing(0);
+    rightText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_RFLP));
+    add(rightText);
+
+    yAxysText.setXY(32, 190);
+    yAxysText.setColor(touchgfx::Color::getColorFromRGB(110, 230, 25));
+    yAxysText.setLinespacing(0);
+    yAxysText.setWildcard(touchgfx::TypedText(T___SINGLEUSE_1HMV).getText());
+    yAxysText.resizeToCurrentText();
+    yAxysText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_SUAM));
+    add(yAxysText);
 }
 
 Screen1ViewBase::~Screen1ViewBase()
@@ -19,4 +98,36 @@ Screen1ViewBase::~Screen1ViewBase()
 void Screen1ViewBase::setupScreen()
 {
 
+}
+
+void Screen1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &upButton)
+    {
+        //ubButtonClicked
+        //When upButton clicked call virtual function
+        //Call ubButtonClicked
+        ubButtonClicked();
+    }
+    if (&src == &downButton)
+    {
+        //downButtonClicked
+        //When downButton clicked call virtual function
+        //Call downButtonClicked
+        downButtonClicked();
+    }
+    if (&src == &leftButton)
+    {
+        //leftButtonClicked
+        //When leftButton clicked call virtual function
+        //Call leftButtonClicked
+        leftButtonClicked();
+    }
+    if (&src == &rightButton)
+    {
+        //rightButtonClicked
+        //When rightButton clicked call virtual function
+        //Call rightButtonClicked
+        rightButtonClicked();
+    }
 }

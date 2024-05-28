@@ -5,6 +5,38 @@
   </Languages>
   <Texts>
     <TextGroup Id="Group1" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_04F0" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_YRBS" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Z axys:&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_3TRG" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_KDQW" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">X axys:&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_1HMV" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_SUAM" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Y axys:&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_RFLP" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Right</Translation>
+      </Text>
+      <Text Id="__SingleUse_T0HH" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Left</Translation>
+      </Text>
+      <Text Id="__SingleUse_SVY1" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Down</Translation>
+      </Text>
+      <Text Id="__SingleUse_DOZV" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Up</Translation>
+      </Text>
+    </TextGroup>
   </Texts>
   <Typographies>
     <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />

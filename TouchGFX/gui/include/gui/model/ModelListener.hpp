@@ -14,6 +14,7 @@ public:
     {
         model = m;
     }
+    virtual void updateGyroStat() {};
 protected:
     Model* model;
 };

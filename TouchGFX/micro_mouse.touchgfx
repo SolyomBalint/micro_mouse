@@ -3,8 +3,201 @@
     "Screens": [
       {
         "Name": "Screen1",
-        "Components": [],
-        "Interactions": []
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "xAxysText",
+            "X": 30,
+            "Y": 160,
+            "Width": 89,
+            "Height": 24,
+            "TextId": "__SingleUse_KDQW",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 110,
+              "Green": 230,
+              "Blue": 25
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_3TRG"
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "zAxysText",
+            "X": 31,
+            "Y": 220,
+            "Width": 89,
+            "Height": 24,
+            "TextId": "__SingleUse_YRBS",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 110,
+              "Green": 230,
+              "Blue": 25
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_04F0"
+            }
+          },
+          {
+            "Type": "RepeatButton",
+            "Name": "upButton",
+            "Width": 240,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
+            "Delay": 200,
+            "Interval": 1000,
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
+          },
+          {
+            "Type": "RepeatButton",
+            "Name": "downButton",
+            "Y": 270,
+            "Width": 240,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
+            "Delay": 200,
+            "Interval": 1000,
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "upText",
+            "X": 107,
+            "Y": 13,
+            "Width": 27,
+            "Height": 24,
+            "TextId": "__SingleUse_DOZV",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "downText",
+            "X": 92,
+            "Y": 283,
+            "Width": 56,
+            "Height": 24,
+            "TextId": "__SingleUse_SVY1",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "RepeatButton",
+            "Name": "leftButton",
+            "Y": 70,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_tiny_fill_action.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_tiny_fill_action.png",
+            "Delay": 200,
+            "Interval": 1000
+          },
+          {
+            "Type": "RepeatButton",
+            "Name": "rightButton",
+            "X": 180,
+            "Y": 70,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_tiny_fill_action.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_tiny_fill_action.png",
+            "Delay": 200,
+            "Interval": 1000
+          },
+          {
+            "Type": "TextArea",
+            "Name": "leftText",
+            "X": 11,
+            "Y": 88,
+            "Width": 38,
+            "Height": 24,
+            "TextId": "__SingleUse_T0HH",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "rightText",
+            "X": 184,
+            "Y": 88,
+            "Width": 52,
+            "Height": 24,
+            "TextId": "__SingleUse_RFLP",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "yAxysText",
+            "X": 32,
+            "Y": 190,
+            "Width": 87,
+            "Height": 24,
+            "TextId": "__SingleUse_SUAM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 110,
+              "Green": 230,
+              "Blue": 25
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_1HMV"
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "ubButtonClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "upButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ubButtonClicked"
+            }
+          },
+          {
+            "InteractionName": "downButtonClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "downButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "downButtonClicked"
+            }
+          },
+          {
+            "InteractionName": "leftButtonClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "leftButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "leftButtonClicked"
+            }
+          },
+          {
+            "InteractionName": "rightButtonClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "rightButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "rightButtonClicked"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [],
