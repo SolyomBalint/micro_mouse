@@ -20,7 +20,7 @@
 #include "main.h"
 #include "usbd_hid.h"
 #include "usb_device.h"
-
+#include <stdbool.h>
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -48,7 +48,7 @@ UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
 #define GYRO_SENSITIVITY 0.00875
-#define MOUSE_SENSITIVITY 0.3
+#define MOUSE_SENSITIVITY 0.35
 
 typedef struct {
     uint8_t buttons;
@@ -64,10 +64,10 @@ void sendMouseReport() {
     USBD_HID_SendReport(&hUsbDeviceHS, (uint8_t*)&mouseReport, sizeof(mouseReport));
 }
 
-void updateMouseReport(int16_t deltaX, int16_t deltaY) {
+void updateMouseReport(int16_t deltaX, int16_t deltaY, uint8_t button_state) {
     mouseReport.x = (int8_t)deltaX;
     mouseReport.y = (int8_t)deltaY;
-    mouseReport.buttons = 0;  // No button press
+    mouseReport.buttons = button_state;
     mouseReport.wheel = 0;    // No wheel movement
 }
 
@@ -132,19 +132,25 @@ int main(void)
   /* USER CODE BEGIN 2 */
   BSP_GYRO_Init();
   float valxyz[3];
+  uint8_t button_pressed = 0x00;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  if(HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_0))
+		  button_pressed = 0x01;
+	  else
+		  button_pressed = 0x00;
+
 	  BSP_GYRO_GetXYZ(valxyz);
 	  printf("x: %f y: %f z: %f \r\n", valxyz[0],valxyz[1] ,valxyz[2]);
 	  int16_t deltaX = convertGyroToMouse(valxyz[0]);
 	  int16_t deltaY = convertGyroToMouse(valxyz[1]);
 
 	  //This is setup to fit the way i hold the mcu
-	  updateMouseReport(-(deltaY), deltaX);
+	  updateMouseReport(-(deltaY), deltaX, button_pressed);
 	  sendMouseReport();
 	  HAL_Delay(100);
     /* USER CODE END WHILE */
