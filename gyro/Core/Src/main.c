@@ -48,7 +48,7 @@ UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
 #define GYRO_SENSITIVITY 0.00875
-#define MOUSE_SENSITIVITY 0.1
+#define MOUSE_SENSITIVITY 0.3
 
 typedef struct {
     uint8_t buttons;
@@ -143,7 +143,8 @@ int main(void)
 	  int16_t deltaX = convertGyroToMouse(valxyz[0]);
 	  int16_t deltaY = convertGyroToMouse(valxyz[1]);
 
-	  updateMouseReport(deltaX, deltaY);
+	  //This is setup to fit the way i hold the mcu
+	  updateMouseReport(-(deltaY), deltaX);
 	  sendMouseReport();
 	  HAL_Delay(100);
     /* USER CODE END WHILE */

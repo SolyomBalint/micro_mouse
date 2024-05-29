@@ -29,16 +29,16 @@ USB_DEVICE/Target/usbd_conf.o: ../USB_DEVICE/Target/usbd_conf.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h \
- C:/TouchGFXProjects/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
- C:/TouchGFXProjects/micro_mouse/gyro/USB_DEVICE/Target/usbd_conf.h \
+ C:/TouchGFXProjects/other_branch/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
+ C:/TouchGFXProjects/other_branch/micro_mouse/gyro/USB_DEVICE/Target/usbd_conf.h \
  ../Core/Inc/main.h \
- C:/TouchGFXProjects/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
- C:/TouchGFXProjects/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
- C:/TouchGFXProjects/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
- C:/TouchGFXProjects/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
- C:/TouchGFXProjects/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h \
- C:/TouchGFXProjects/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Class/HID/Inc/usbd_hid.h \
- C:/TouchGFXProjects/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
+ C:/TouchGFXProjects/other_branch/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
+ C:/TouchGFXProjects/other_branch/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
+ C:/TouchGFXProjects/other_branch/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
+ C:/TouchGFXProjects/other_branch/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
+ C:/TouchGFXProjects/other_branch/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h \
+ C:/TouchGFXProjects/other_branch/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Class/HID/Inc/usbd_hid.h \
+ C:/TouchGFXProjects/other_branch/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f429xx.h:
 ../Drivers/CMSIS/Include/core_cm4.h:
@@ -69,13 +69,13 @@ USB_DEVICE/Target/usbd_conf.o: ../USB_DEVICE/Target/usbd_conf.c \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h:
-C:/TouchGFXProjects/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
-C:/TouchGFXProjects/micro_mouse/gyro/USB_DEVICE/Target/usbd_conf.h:
+C:/TouchGFXProjects/other_branch/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
+C:/TouchGFXProjects/other_branch/micro_mouse/gyro/USB_DEVICE/Target/usbd_conf.h:
 ../Core/Inc/main.h:
-C:/TouchGFXProjects/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h:
-C:/TouchGFXProjects/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
-C:/TouchGFXProjects/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
-C:/TouchGFXProjects/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h:
-C:/TouchGFXProjects/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h:
-C:/TouchGFXProjects/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Class/HID/Inc/usbd_hid.h:
-C:/TouchGFXProjects/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
+C:/TouchGFXProjects/other_branch/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h:
+C:/TouchGFXProjects/other_branch/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
+C:/TouchGFXProjects/other_branch/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
+C:/TouchGFXProjects/other_branch/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h:
+C:/TouchGFXProjects/other_branch/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h:
+C:/TouchGFXProjects/other_branch/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Class/HID/Inc/usbd_hid.h:
+C:/TouchGFXProjects/other_branch/micro_mouse/gyro/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:

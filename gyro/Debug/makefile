@@ -68,8 +68,8 @@ all: main-build
 main-build: GYRO_MOUSE.elf secondary-outputs
 
 # Tool invocations
-GYRO_MOUSE.elf GYRO_MOUSE.map: $(OBJS) $(USER_OBJS) C:\TouchGFXProjects\micro_mouse\gyro\STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "GYRO_MOUSE.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\TouchGFXProjects\micro_mouse\gyro\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GYRO_MOUSE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+GYRO_MOUSE.elf GYRO_MOUSE.map: $(OBJS) $(USER_OBJS) C:\TouchGFXProjects\other_branch\micro_mouse\gyro\STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "GYRO_MOUSE.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\TouchGFXProjects\other_branch\micro_mouse\gyro\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GYRO_MOUSE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
